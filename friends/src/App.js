@@ -4,6 +4,9 @@ import './App.css';
 
 import Login from './components/Login';
 import PrivateRoute from './components/PrivateRoute'
+import FriendsList from './components/FriendsList';
+import Navbar from './components/Navbar'
+import AddFriend from './components/AddFriend'
 
 function App() {
   return (
@@ -12,8 +15,12 @@ function App() {
         <Route path='/login'>
           <Login />
         </Route>
+        <PrivateRoute path='/add-friend'>
+          <AddFriend />
+        </PrivateRoute>
         <PrivateRoute path='/'>
-          <h1>Welcome to friends</h1>
+          <Navbar />
+          <FriendsList />
         </PrivateRoute>
       </Switch>
     </Router>
