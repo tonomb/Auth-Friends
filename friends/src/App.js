@@ -1,11 +1,23 @@
 import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import './App.css';
+
+import Login from './components/Login';
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Friends App</h1>
-    </div>
+    <Router>
+      <Switch>
+        <Route path='/login'>
+          <Login />
+        </Route>
+        <PrivateRoute path='/'>
+          <h1>Welcome to friends</h1>
+        </PrivateRoute>
+      </Switch>
+    </Router>
+    
   );
 }
 
