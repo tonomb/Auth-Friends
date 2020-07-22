@@ -8,6 +8,11 @@ const initialFormValues={
     password:'i<3Lambd4'
 }
 
+// const initialFormValues={
+//     username:'',
+//     password:''
+// }
+
 function Login (){
     const history = useHistory()
     const [formValues, setFormValues] = useState(initialFormValues);
@@ -39,26 +44,30 @@ function Login (){
     }
 
     return(
-        <div>
-            <form onSubmit={handleLogin}>
-                <label>Username
+        <div className='flex items-center justify-center h-screen w-screen'>
+            <form className='flex flex-col bg-blue-500 p-10 rounded' onSubmit={handleLogin}>
+                <label className='text-2xl text-gray-800' >
                     <input 
+                        className='p-2 my-3 rounded'
                         type='text'
                         onChange={handleChange}
                         name='username'
                         value={formValues.username}
+                        placeholder='username'
                      />
                 </label>
-                <label>Password
+                <label className='text-2xl text-gray-800 w-auto'>
                     <input 
+                        className='p-2 my-3 rounded'
                         type='password'
                         onChange={handleChange}
                         name='password'
                         value={formValues.password}
+                        placeholder='password'
 
                          />
                 </label>
-                <button>Log In</button>
+                <button className='bg-blue-800 text-white rounded w-3/6 self-end p-2' >Log In</button>
             </form>
         </div>
     )

@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link, useRouteMatch  } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Navbar(){
     return(
-        <div>
-            <h1>This is a navbar</h1>
-            <Link to='/add-friend' >add new friend</Link>
+        <div className='flex justify-end'>
+            <Link className='bg-teal-200 rounded p-2 m-10 ' to='/add-friend' >add new friend</Link>
         </div>
     )
 }

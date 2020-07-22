@@ -20,11 +20,11 @@ function FriendsList(){
     },[])
 
     return(
-        <div>
-            <h3>This is the friends list</h3>
+        <div className='text-center'>
+            <h3 className='text-4xl text-teal-900'>Friends</h3>
             {
                 friends.map(friend =>{
-                    return <h2 key={friend.id}>{friend.name}</h2>
+                    return <h2 className='text-2xl p-3 bg-teal-100 my-5 w-3/6 mx-auto' key={friend.id}>{friend.name}</h2>
                 })
             }
         </div>
